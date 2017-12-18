@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 export default class NavBar extends Component {
   render() {
     return (
+      <div>
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
@@ -11,14 +13,15 @@ export default class NavBar extends Component {
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
-          <NavItem eventKey={1} href="#">Home</NavItem>
-          <NavItem eventKey={2} href="#">Polls</NavItem>
+          <NavItem eventKey={1} href="/">Home</NavItem>
+          <NavItem eventKey={2} href="polls">Polls</NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={3} href="#">Login</NavItem>
-          <NavItem eventKey={4} href="#">Sign Up</NavItem>
+          <NavItem eventKey={3} href="">Login</NavItem>
+          <NavItem eventKey={4} href="signup">Sign Up</NavItem>
         </Nav>
       </Navbar>
+    </div>
     )
   }
 }
